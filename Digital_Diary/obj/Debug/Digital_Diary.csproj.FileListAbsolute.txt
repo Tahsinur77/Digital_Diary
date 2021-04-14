@@ -1,0 +1,10 @@
+D:\Digital Diary\Digital_Diary\Digital_Diary\bin\Debug\Digital_Diary.exe.config
+D:\Digital Diary\Digital_Diary\Digital_Diary\bin\Debug\Digital_Diary.exe
+D:\Digital Diary\Digital_Diary\Digital_Diary\bin\Debug\Digital_Diary.pdb
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.csprojAssemblyReference.cache
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.Properties.Resources.resources
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.csproj.GenerateResource.cache
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.csproj.CoreCompileInputs.cache
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.exe
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.pdb
+D:\Digital Diary\Digital_Diary\Digital_Diary\obj\Debug\Digital_Diary.Home_Screen.resources
