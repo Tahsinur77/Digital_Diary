@@ -21,5 +21,23 @@ namespace Digital_Diary
         {
             Application.Exit();
         }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 1;
+            for (int i = 0; i < 1000; i++)
+            {
+                progressBar1.PerformStep();
+            }
+            Login log = new Login();
+            this.Hide();
+            log.Show();
+        }
     }
 }

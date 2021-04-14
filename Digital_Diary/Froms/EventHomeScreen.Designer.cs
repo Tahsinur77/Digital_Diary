@@ -1,0 +1,89 @@
+﻿
+namespace Digital_Diary
+{
+    partial class EventHomeScreen
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.creatNewEventButton = new System.Windows.Forms.Button();
+            this.savedEventButton = new System.Windows.Forms.Button();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // creatNewEventButton
+            // 
+            this.creatNewEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creatNewEventButton.Location = new System.Drawing.Point(83, 138);
+            this.creatNewEventButton.Name = "creatNewEventButton";
+            this.creatNewEventButton.Size = new System.Drawing.Size(140, 133);
+            this.creatNewEventButton.TabIndex = 0;
+            this.creatNewEventButton.Text = "Creant New Event";
+            this.creatNewEventButton.UseVisualStyleBackColor = true;
+            // 
+            // savedEventButton
+            // 
+            this.savedEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savedEventButton.Location = new System.Drawing.Point(281, 138);
+            this.savedEventButton.Name = "savedEventButton";
+            this.savedEventButton.Size = new System.Drawing.Size(140, 133);
+            this.savedEventButton.TabIndex = 1;
+            this.savedEventButton.Text = "Saved Event";
+            this.savedEventButton.UseVisualStyleBackColor = true;
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Location = new System.Drawing.Point(333, 351);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(88, 36);
+            this.logOutButton.TabIndex = 2;
+            this.logOutButton.Text = "Logout";
+            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
+            // EventHomeScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(542, 469);
+            this.Controls.Add(this.logOutButton);
+            this.Controls.Add(this.savedEventButton);
+            this.Controls.Add(this.creatNewEventButton);
+            this.Name = "EventHomeScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Event_Home_Screen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_Home_Screen_FormClosing);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button creatNewEventButton;
+        private System.Windows.Forms.Button savedEventButton;
+        private System.Windows.Forms.Button logOutButton;
+    }
+}
