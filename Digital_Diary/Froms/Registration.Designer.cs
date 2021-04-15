@@ -330,5 +330,42 @@ namespace Digital_Diary
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
+
+        public string NameTextBox
+        {
+            get { return this.nameTextBox.Text; }
+        }
+        public string UserNameTextBox
+        {
+            get { return this.usernameTextBox.Text; }
+        }
+        public string PasswordTextBox
+        {
+            get { return this.passwordTextBox.Text; }
+        }
+        public string ConfirmPasswordTextBox
+        {
+            get { return this.confirmTextBox.Text; }
+        }
+        public string EmailTextBox
+        {
+            get { return this.emailTextBox.Text; }
+        }
+        public bool MailRadioButton
+        {
+            get { return this.maleButton.Checked; }
+        }
+        public bool FemailRadioButton
+        {
+            get { return this.femaleButton.Checked; }
+        }
+        public string DateOfBirth
+        {
+            get { return this.dateTimePicker1.Text; }
+        }
+        public string BloodGroup
+        {
+            get { return this.bloodGroupcomboBox.Text; }
+        }
     }
 }

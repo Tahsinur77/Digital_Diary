@@ -28,5 +28,11 @@ namespace Digital_Diary
             this.Hide();
             eventHomeScreen.Show();
         }
+
+
+        private void AllEvents_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
