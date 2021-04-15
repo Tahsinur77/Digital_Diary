@@ -28,5 +28,19 @@ namespace Digital_Diary
             this.Hide();
             login.Show();
         }
+
+        private void creatNewEventButton_Click(object sender, EventArgs e)
+        {
+            EventCreation eventCreation = new EventCreation();
+            this.Hide();
+            eventCreation.Show();
+        }
+
+        private void savedEventButton_Click(object sender, EventArgs e)
+        {
+            AllEvents allevents = new AllEvents();
+            this.Hide();
+            allevents.Show();
+        }
     }
 }

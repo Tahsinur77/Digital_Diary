@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Froms\AllEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AllEvents.Designer.cs">
+      <DependentUpon>AllEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\EventCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\EventCreation.Designer.cs">
+      <DependentUpon>EventCreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\EventHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="Froms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Froms\AllEvents.resx">
+      <DependentUpon>AllEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\EventCreation.resx">
+      <DependentUpon>EventCreation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\EventHomeScreen.resx">
       <DependentUpon>EventHomeScreen.cs</DependentUpon>
     </EmbeddedResource>

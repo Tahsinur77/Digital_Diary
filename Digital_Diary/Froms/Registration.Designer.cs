@@ -34,7 +34,7 @@ namespace Digital_Diary
             this.femaleButton = new System.Windows.Forms.RadioButton();
             this.maleButton = new System.Windows.Forms.RadioButton();
             this.genderLabel = new System.Windows.Forms.Label();
-            this.submit = new System.Windows.Forms.Button();
+            this.submitButton = new System.Windows.Forms.Button();
             this.termCondition = new System.Windows.Forms.CheckBox();
             this.bloodGroupcomboBox = new System.Windows.Forms.ComboBox();
             this.bloodGroupLabel = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace Digital_Diary
             this.groupBox1.Controls.Add(this.femaleButton);
             this.groupBox1.Controls.Add(this.maleButton);
             this.groupBox1.Controls.Add(this.genderLabel);
-            this.groupBox1.Controls.Add(this.submit);
+            this.groupBox1.Controls.Add(this.submitButton);
             this.groupBox1.Controls.Add(this.termCondition);
             this.groupBox1.Controls.Add(this.bloodGroupcomboBox);
             this.groupBox1.Controls.Add(this.bloodGroupLabel);
@@ -127,16 +127,16 @@ namespace Digital_Diary
             this.genderLabel.TabIndex = 36;
             this.genderLabel.Text = "Gender";
             // 
-            // submit
+            // submitButton
             // 
-            this.submit.Enabled = false;
-            this.submit.Location = new System.Drawing.Point(196, 487);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(123, 36);
-            this.submit.TabIndex = 35;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.submit_Click);
+            this.submitButton.Enabled = false;
+            this.submitButton.Location = new System.Drawing.Point(196, 487);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(123, 36);
+            this.submitButton.TabIndex = 35;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submit_Click);
             // 
             // termCondition
             // 
@@ -148,6 +148,7 @@ namespace Digital_Diary
             this.termCondition.TabIndex = 34;
             this.termCondition.Text = "Agree with the term and condition";
             this.termCondition.UseVisualStyleBackColor = true;
+            this.termCondition.CheckedChanged += new System.EventHandler(this.termCondition_CheckedChanged);
             // 
             // bloodGroupcomboBox
             // 
@@ -313,7 +314,7 @@ namespace Digital_Diary
         private System.Windows.Forms.RadioButton femaleButton;
         private System.Windows.Forms.RadioButton maleButton;
         private System.Windows.Forms.Label genderLabel;
-        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.CheckBox termCondition;
         private System.Windows.Forms.ComboBox bloodGroupcomboBox;
         private System.Windows.Forms.Label bloodGroupLabel;

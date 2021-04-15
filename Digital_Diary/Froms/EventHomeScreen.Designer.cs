@@ -32,6 +32,8 @@ namespace Digital_Diary
             this.creatNewEventButton = new System.Windows.Forms.Button();
             this.savedEventButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
+            this.lastModificationLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // creatNewEventButton
@@ -43,6 +45,7 @@ namespace Digital_Diary
             this.creatNewEventButton.TabIndex = 0;
             this.creatNewEventButton.Text = "Creant New Event";
             this.creatNewEventButton.UseVisualStyleBackColor = true;
+            this.creatNewEventButton.Click += new System.EventHandler(this.creatNewEventButton_Click);
             // 
             // savedEventButton
             // 
@@ -53,10 +56,11 @@ namespace Digital_Diary
             this.savedEventButton.TabIndex = 1;
             this.savedEventButton.Text = "Saved Event";
             this.savedEventButton.UseVisualStyleBackColor = true;
+            this.savedEventButton.Click += new System.EventHandler(this.savedEventButton_Click);
             // 
             // logOutButton
             // 
-            this.logOutButton.Location = new System.Drawing.Point(333, 351);
+            this.logOutButton.Location = new System.Drawing.Point(333, 404);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Size = new System.Drawing.Size(88, 36);
             this.logOutButton.TabIndex = 2;
@@ -64,11 +68,30 @@ namespace Digital_Diary
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
+            // lastModificationLabel
+            // 
+            this.lastModificationLabel.AutoSize = true;
+            this.lastModificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastModificationLabel.Location = new System.Drawing.Point(83, 74);
+            this.lastModificationLabel.Name = "lastModificationLabel";
+            this.lastModificationLabel.Size = new System.Drawing.Size(163, 25);
+            this.lastModificationLabel.TabIndex = 3;
+            this.lastModificationLabel.Text = "Last Modification ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(253, 76);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(142, 22);
+            this.textBox1.TabIndex = 4;
+            // 
             // EventHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 469);
+            this.ClientSize = new System.Drawing.Size(477, 469);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lastModificationLabel);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.savedEventButton);
             this.Controls.Add(this.creatNewEventButton);
@@ -77,6 +100,7 @@ namespace Digital_Diary
             this.Text = "Event_Home_Screen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_Home_Screen_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,5 +109,7 @@ namespace Digital_Diary
         private System.Windows.Forms.Button creatNewEventButton;
         private System.Windows.Forms.Button savedEventButton;
         private System.Windows.Forms.Button logOutButton;
+        private System.Windows.Forms.Label lastModificationLabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

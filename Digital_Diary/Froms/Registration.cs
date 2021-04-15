@@ -29,9 +29,18 @@ namespace Digital_Diary
 
         private void submit_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Account created sucessfully...");
             Login login = new Login();
             this.Hide();
             login.Show();
+        }
+
+        private void termCondition_CheckedChanged(object sender, EventArgs e)
+        {
+            if(termCondition.Checked == true)
+            {
+                submitButton.Enabled = true;
+            }
         }
     }
 }
