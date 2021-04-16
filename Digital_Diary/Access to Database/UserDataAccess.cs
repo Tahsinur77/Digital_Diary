@@ -18,27 +18,29 @@ namespace Digital_Diary.Access_to_Database
         }
         public User SearchUser(string userName,string password)
         {
-            string sql = "Select * from Users where UserName " + " = userName and Password " + " = password";
+            string sql = "SELECT * FROM Users WHERE UserName='" + userName + "' AND Password='" + password + "'";
             SqlDataReader reader = this.GetData(sql);
-            User user = new User();
+            
             if (reader.Read())
             {
+                User user = new User();
                 user.UserName = reader["UserName"].ToString();
                 user.Password = reader["Password"].ToString();
+                return user;
             }
-            return user;
+            return null;
         }
         public User UserNameCheck(string userName)
         {
-            string sql = "Select UserName from Users where UserName " + "  = userName";
+            string sql = "SELECT * FROM Users WHERE UserName='" + userName + "'";
             SqlDataReader reader = this.GetData(sql);
-
-            User user = new User();
             if (reader.Read())
             {
+                User user = new User();
                 user.UserName = reader["UserName"].ToString();
+                return user;
             }
-            return user;
+            return null;
         }
     }
 }

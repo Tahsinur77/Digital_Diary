@@ -38,7 +38,7 @@ namespace Digital_Diary.Codes
             User user = new User();
            this.userDataAccess = new UserDataAccess();
            user = this.userDataAccess.SearchUser(userName, password);
-
+            if (user == null) return -1;
             if (user.UserName == userName && user.Password == password)
             {
                 return 1;
@@ -51,6 +51,7 @@ namespace Digital_Diary.Codes
             this.userDataAccess = new UserDataAccess();
             user = this.userDataAccess.UserNameCheck(userName);
 
+            if (user == null) return false;
             if (user.UserName == userName)
             {
                 return true;
