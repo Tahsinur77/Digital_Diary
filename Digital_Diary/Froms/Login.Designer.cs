@@ -123,5 +123,14 @@ namespace Digital_Diary
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button creatNewAccountButton;
+
+        public string UserName
+        {
+            get { return this.userNameTextBox.Text; }
+        }
+        public string Password
+        {
+            get { return this.passwordTextBox.Text; }
+        }
     }
 }

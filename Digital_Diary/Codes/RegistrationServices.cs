@@ -32,6 +32,18 @@ namespace Digital_Diary.Codes
             };
             this.userDataAccess= new UserDataAccess();
             return this.userDataAccess.AddUser(user);
-        }  
+        } 
+        public int Search(string userName,string password)
+        {
+            User user = new User();
+           this.userDataAccess = new UserDataAccess();
+           user = this.userDataAccess.SearchUser(userName, password);
+
+            if (user.UserName == userName && user.Password == password)
+            {
+                return 1;
+            }
+            else return -1;
+        }
     }
 }

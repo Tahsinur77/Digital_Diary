@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Digital_Diary.Codes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,9 +32,21 @@ namespace Digital_Diary
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            EventHomeScreen event1 = new EventHomeScreen();
-            this.Hide();
-            event1.Show();
+            int x = 0;
+            RegistrationServices registration = new RegistrationServices();
+            x = registration.Search(UserName, Password);
+            if (x == 1)
+            {
+                EventHomeScreen event1 = new EventHomeScreen();
+                this.Hide();
+                event1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username And Password not currect.Try again");
+                userNameTextBox.Text = "";
+                passwordTextBox.Text = "";
+            }
         }
     }
 }
