@@ -30,7 +30,14 @@ namespace Digital_Diary
             registration.Show();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click_1(object sender, EventArgs e)
         {
             int x = 0;
             RegistrationServices registration = new RegistrationServices();

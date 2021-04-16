@@ -75,5 +75,12 @@ namespace Digital_Diary
                 submitButton.Enabled = true;
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
     }
 }

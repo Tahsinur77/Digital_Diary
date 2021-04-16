@@ -50,6 +50,7 @@ namespace Digital_Diary
             this.userNameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace Digital_Diary
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 543);
+            this.groupBox1.Size = new System.Drawing.Size(511, 533);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Registration";
@@ -290,11 +291,22 @@ namespace Digital_Diary
             this.nameLabel.TabIndex = 20;
             this.nameLabel.Text = "Name";
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(448, 551);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 34);
+            this.backButton.TabIndex = 1;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 567);
+            this.ClientSize = new System.Drawing.Size(560, 592);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.groupBox1);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -330,6 +342,7 @@ namespace Digital_Diary
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Button backButton;
 
         public string NameTextBox
         {
