@@ -28,5 +28,17 @@ namespace Digital_Diary.Access_to_Database
             }
             return user;
         }
+        public User UserNameCheck(string userName)
+        {
+            string sql = "Select UserName from Users where UserName " + "  = userName";
+            SqlDataReader reader = this.GetData(sql);
+
+            User user = new User();
+            if (reader.Read())
+            {
+                user.UserName = reader["UserName"].ToString();
+            }
+            return user;
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace Digital_Diary
                 }
                 bool check = false;
                 string message = "Do you want to Add more picture?";
-                string title = "Close Window";
+                string title = "choise";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)

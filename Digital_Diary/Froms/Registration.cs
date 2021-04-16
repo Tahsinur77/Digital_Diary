@@ -55,15 +55,25 @@ namespace Digital_Diary
                 if (check == false) MessageBox.Show("There is no space in Username");
                 else
                 {
-                    string gender = "";
-                    if (maleButton.Checked == true) gender = "MAle";
-                    else gender = "Female";
-                    RegistrationServices registrationServices = new RegistrationServices();
-                    registrationServices.Add(NameTextBox,UserNameTextBox,PasswordTextBox,EmailTextBox,gender,DateOfBirth,BloodGroup);
-                    MessageBox.Show("Account created sucessfully...");
-                    Login login = new Login();
-                    this.Hide();
-                    login.Show();
+                    
+                    RegistrationServices checkingUserName = new RegistrationServices();
+                    bool checking = checkingUserName.CheckingUserName(UserNameTextBox);
+                    if (checking)
+                    {
+                        MessageBox.Show("User Name Already Taken...Try Another user name");
+                    }
+                    else
+                    {
+                        string gender = "";
+                        if (maleButton.Checked == true) gender = "MAle";
+                        else gender = "Female";
+                        RegistrationServices registrationServices = new RegistrationServices();
+                        registrationServices.Add(NameTextBox, UserNameTextBox, PasswordTextBox, EmailTextBox, gender, DateOfBirth, BloodGroup);
+                        MessageBox.Show("Account created sucessfully...");
+                        Login login = new Login();
+                        this.Hide();
+                        login.Show();
+                    }
                 }
             }
         }

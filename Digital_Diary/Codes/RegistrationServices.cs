@@ -45,5 +45,17 @@ namespace Digital_Diary.Codes
             }
             else return -1;
         }
+        public bool CheckingUserName(string userName)
+        {
+            User user = new User();
+            this.userDataAccess = new UserDataAccess();
+            user = this.userDataAccess.UserNameCheck(userName);
+
+            if (user.UserName == userName)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }
