@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Digital_Diary.Codes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,20 @@ namespace Digital_Diary
     public partial class EventCreation : Form
     {
         List<string> pictures = new List<string>();
+        private string userName;
         public EventCreation()
         {
             InitializeComponent();
         }
+        public void LoginUserName2(string userName)
+        {
+            this.userName = userName;
+        }
+        public string UserName2
+        {
+            get { return this.userName; }
+        }
+
 
         private void EventCreation_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -25,6 +36,18 @@ namespace Digital_Diary
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            string importance = "";
+            if (HighRadioButton) importance = "High";
+            else if (ModerateRadioButton) importance = "Moderate";
+            else importance = "Low";
+            
+            EventsServices eventsServices = new EventsServices();
+            eventsServices.AddEvents(EventName,EventStory,EventDate,importance,UserName2);
+            foreach(string pic in pictures)
+            {
+                eventsServices.AddPictures(pic, EventName);
+            }
+            MessageBox.Show("Creat new events Successfully");
             EventHomeScreen eventHomeScreen = new EventHomeScreen();
             this.Hide();
             eventHomeScreen.Show();

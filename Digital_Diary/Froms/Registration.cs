@@ -65,7 +65,7 @@ namespace Digital_Diary
                     else
                     {
                         string gender = "";
-                        if (maleButton.Checked == true) gender = "Mle";
+                        if (maleButton.Checked == true) gender = "Male";
                         else gender = "Female";
                         RegistrationServices registrationServices = new RegistrationServices();
                         registrationServices.Add(NameTextBox, UserNameTextBox, PasswordTextBox, EmailTextBox, gender, DateOfBirth, BloodGroup);

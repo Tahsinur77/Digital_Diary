@@ -12,11 +12,19 @@ namespace Digital_Diary
 {
     public partial class EventHomeScreen : Form
     {
+        private string userName;
         public EventHomeScreen()
         {
             InitializeComponent();
         }
-
+        public void LoginUserName(string userName)
+        {
+            this.userName = userName;
+        }
+        public string UserName
+        {
+            get { return this.userName; }
+        }
         private void Event_Home_Screen_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -33,6 +41,7 @@ namespace Digital_Diary
         {
             EventCreation eventCreation = new EventCreation();
             this.Hide();
+            eventCreation.LoginUserName2(UserName);
             eventCreation.Show();
         }
 

@@ -244,5 +244,33 @@ namespace Digital_Diary
         private System.Windows.Forms.RadioButton highRadioButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button backButton;
+
+        public string EventName
+        {
+            get { return this.eventNameTextBox.Text; }
+        }
+        public string EventStory
+        {
+            get { return this.storyTextBox.Text; }
+        }
+        public string EventDate
+        {
+            get { return this.dateTimePicker1.Text; }
+        }
+        public bool HighRadioButton
+        {
+            get { return this.highRadioButton.Checked; }
+        }
+        public bool ModerateRadioButton
+        {
+            get { return this.moderateRadioButton.Checked; }
+        }
+        public bool LowRadioButton
+        {
+            get { return this.lowRadioButton.Checked; }
+        }
+
+
+
     }
 }

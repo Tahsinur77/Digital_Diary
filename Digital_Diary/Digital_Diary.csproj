@@ -48,8 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Access to Database\DataAccess.cs" />
+    <Compile Include="Access to Database\Entities\EventPictures.cs" />
+    <Compile Include="Access to Database\Entities\Events.cs" />
     <Compile Include="Access to Database\Entities\User.cs" />
+    <Compile Include="Access to Database\EventsDataAccess.cs" />
     <Compile Include="Access to Database\UserDataAccess.cs" />
+    <Compile Include="Codes\EventsServices.cs" />
     <Compile Include="Codes\RegistrationServices.cs" />
     <Compile Include="Froms\AllEvents.cs">
       <SubType>Form</SubType>
