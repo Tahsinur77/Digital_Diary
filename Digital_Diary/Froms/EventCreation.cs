@@ -59,6 +59,7 @@ namespace Digital_Diary
                 MessageBox.Show("Creat new events Successfully");
                 EventHomeScreen eventHomeScreen = new EventHomeScreen();
                 this.Hide();
+                eventHomeScreen.LoginUserName(userName);
                 eventHomeScreen.Show();
             }
         }
@@ -67,6 +68,7 @@ namespace Digital_Diary
         {
             EventHomeScreen eventHome = new EventHomeScreen();
             this.Hide();
+            eventHome.LoginUserName(userName);
             eventHome.Show();
         }
 

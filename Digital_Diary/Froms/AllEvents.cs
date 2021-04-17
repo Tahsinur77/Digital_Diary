@@ -37,6 +37,7 @@ namespace Digital_Diary
         {
             EventHomeScreen eventHomeScreen = new EventHomeScreen();
             this.Hide();
+            eventHomeScreen.LoginUserName(userName);
             eventHomeScreen.Show();
         }
 
