@@ -1,6 +1,7 @@
 ﻿using Digital_Diary.Access_to_Database.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,5 +21,18 @@ namespace Digital_Diary.Access_to_Database
             string sql = "INSERT INTO Pictures(Pictures,EventName) VALUES('" + eventPictures.Pictures + "','" + eventPictures.EventsName + "')";
             return this.ExecuteQuery(sql);
         }
+        public Events EventNameCheck(string eventName)
+        {
+            string sql = "SELECT * FROM Events WHERE EventName='" + eventName + "'";
+            SqlDataReader reader = this.GetData(sql);
+            if (reader.Read())
+            {
+                Events events = new Events();
+                events.EventName  = reader["EventName"].ToString();
+                return events;
+            }
+            return null;
+        }
+        
     }
 }

@@ -36,21 +36,31 @@ namespace Digital_Diary
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string importance = "";
-            if (HighRadioButton) importance = "High";
-            else if (ModerateRadioButton) importance = "Moderate";
-            else importance = "Low";
-            
             EventsServices eventsServices = new EventsServices();
-            eventsServices.AddEvents(EventName,EventStory,EventDate,importance,UserName2);
-            foreach(string pic in pictures)
+            bool check = eventsServices.CheckingEventName(EventName);
+
+            if (check)
             {
-                eventsServices.AddPictures(pic, EventName);
+                MessageBox.Show("Already Used this Event Name..");
             }
-            MessageBox.Show("Creat new events Successfully");
-            EventHomeScreen eventHomeScreen = new EventHomeScreen();
-            this.Hide();
-            eventHomeScreen.Show();
+            else
+            {
+                string importance = "";
+                if (HighRadioButton) importance = "High";
+                else if (ModerateRadioButton) importance = "Moderate";
+                else importance = "Low";
+
+                //EventsServices eventsServices = new EventsServices();
+                eventsServices.AddEvents(EventName, EventStory, EventDate, importance, UserName2);
+                foreach (string pic in pictures)
+                {
+                    eventsServices.AddPictures(pic, EventName);
+                }
+                MessageBox.Show("Creat new events Successfully");
+                EventHomeScreen eventHomeScreen = new EventHomeScreen();
+                this.Hide();
+                eventHomeScreen.Show();
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)

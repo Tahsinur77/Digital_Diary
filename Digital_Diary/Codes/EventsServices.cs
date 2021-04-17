@@ -40,5 +40,19 @@ namespace Digital_Diary.Codes
             this.eventsDataAccess = new EventsDataAccess();
             return this.eventsDataAccess.AddingPictures(eventPictures);
         }
+
+        public bool CheckingEventName(string eventName)
+        {
+            Events events = new Events();
+            this.eventsDataAccess = new EventsDataAccess();
+            events = this.eventsDataAccess.EventNameCheck(eventName);
+
+            if (events == null) return false;
+            if (events.EventName == eventName)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }
