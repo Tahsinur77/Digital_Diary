@@ -54,5 +54,10 @@ namespace Digital_Diary.Codes
             }
             else return false;
         }
+
+        public List<string> AllEventsName(string userName)
+        {
+            return this.eventsDataAccess.GetAllEvents(userName);
+        }
     }
 }

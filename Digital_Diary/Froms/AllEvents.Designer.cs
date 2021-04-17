@@ -30,6 +30,8 @@ namespace Digital_Diary
         private void InitializeComponent()
         {
             this.backButton = new System.Windows.Forms.Button();
+            this.allEventsComboBox = new System.Windows.Forms.ComboBox();
+            this.showEventListButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backButton
@@ -42,11 +44,32 @@ namespace Digital_Diary
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // allEventsComboBox
+            // 
+            this.allEventsComboBox.FormattingEnabled = true;
+            this.allEventsComboBox.Location = new System.Drawing.Point(34, 88);
+            this.allEventsComboBox.Name = "allEventsComboBox";
+            this.allEventsComboBox.Size = new System.Drawing.Size(168, 24);
+            this.allEventsComboBox.TabIndex = 1;
+            this.allEventsComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // showEventListButton
+            // 
+            this.showEventListButton.Location = new System.Drawing.Point(34, 35);
+            this.showEventListButton.Name = "showEventListButton";
+            this.showEventListButton.Size = new System.Drawing.Size(115, 35);
+            this.showEventListButton.TabIndex = 2;
+            this.showEventListButton.Text = "Show Event List";
+            this.showEventListButton.UseVisualStyleBackColor = true;
+            this.showEventListButton.Click += new System.EventHandler(this.showEventListButton_Click);
+            // 
             // AllEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 519);
+            this.Controls.Add(this.showEventListButton);
+            this.Controls.Add(this.allEventsComboBox);
             this.Controls.Add(this.backButton);
             this.Name = "AllEvents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -60,5 +83,7 @@ namespace Digital_Diary
         #endregion
 
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.ComboBox allEventsComboBox;
+        private System.Windows.Forms.Button showEventListButton;
     }
 }

@@ -49,6 +49,7 @@ namespace Digital_Diary
         {
             AllEvents allevents = new AllEvents();
             this.Hide();
+            allevents.LoginUser(userName);
             allevents.Show();
         }
     }

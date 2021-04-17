@@ -33,6 +33,18 @@ namespace Digital_Diary.Access_to_Database
             }
             return null;
         }
-        
+        public List<string> GetAllEvents(string userName)
+        {
+            string sql = "SELECT * FROM Events WHERE Username='"+userName+"'";
+            SqlDataReader reader = this.GetData(sql);
+            List<string> events = new List<string>();
+            while (reader.Read())
+            {
+                Events events1 = new Events();
+                events1.EventName = reader["EventName"].ToString();
+                events.Add(events1.EventName);
+            }
+            return events;
+        }
     }
 }

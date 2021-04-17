@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Digital_Diary.Codes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace Digital_Diary
 {
     public partial class AllEvents : Form
     {
+        private string userName;
         public AllEvents()
         {
             InitializeComponent();
+            
+        }
+        public void LoginUser(string userName)
+        {
+            this.userName = userName;
+        }
+        public string UserName
+        {
+            get { return this.userName; }
         }
 
         private void AllEvent_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,6 +43,19 @@ namespace Digital_Diary
 
         private void AllEvents_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void showEventListButton_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(userName);
+            EventsServices events = new EventsServices();
+            allEventsComboBox.DataSource = events.AllEventsName(userName);
 
         }
     }
