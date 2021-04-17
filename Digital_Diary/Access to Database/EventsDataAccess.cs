@@ -46,5 +46,19 @@ namespace Digital_Diary.Access_to_Database
             }
             return events;
         }
+
+        public List<string> GetAllPictures(string eventName)
+        {
+            string sql = "SELECT * FROM Pictures WHERE EventName='" + eventName + "'";
+            SqlDataReader reader = this.GetData(sql);
+            List<string> pictures = new List<string>();
+            while (reader.Read())
+            {
+                EventPictures eventPictures = new EventPictures();
+                eventPictures.Pictures = reader["Pictures"].ToString();
+                pictures.Add(eventPictures.Pictures);
+            }
+            return pictures;
+        }
     }
 }

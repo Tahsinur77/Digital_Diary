@@ -87,6 +87,7 @@ namespace Digital_Diary
             this.viewButton.TabIndex = 4;
             this.viewButton.Text = "View";
             this.viewButton.UseVisualStyleBackColor = true;
+            this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
             // pictureBox1
             // 
@@ -148,5 +149,10 @@ namespace Digital_Diary
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button previousButton;
+
+        public string ComboBoxText
+        {
+            get { return this.allEventsComboBox.Text; }
+        }
     }
 }

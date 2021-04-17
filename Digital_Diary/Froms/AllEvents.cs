@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Digital_Diary
     public partial class AllEvents : Form
     {
         private string userName;
+        List<string> pictures = new List<string>();
         public AllEvents()
         {
             InitializeComponent();
@@ -58,6 +60,31 @@ namespace Digital_Diary
             EventsServices events = new EventsServices();
             allEventsComboBox.DataSource = events.AllEventsName(userName);
 
+        }
+
+        private void viewButton_Click(object sender, EventArgs e)
+        {
+            EventsServices eventsServices = new EventsServices();
+            foreach (string pic in eventsServices.AllEventPictures(ComboBoxText))
+            {
+                pictures.Add(pic);
+            }
+
+            int i = 0;
+            //while (true)
+            //{
+                string ok = pictures[i];
+            //string path = System.IO.Path.Combine(ok);
+            //MessageBox.Show("" + ok);
+            //string filename = Path.GetFileName(ok);
+            //pictureBox1 =filename;
+            PictureBox pb = new PictureBox();
+                Image loadedImage = Image.FromFile(ok);
+            pb.Width = loadedImage.Width;
+            pb.Image = loadedImage;
+            pictureBox1.Image = loadedImage;
+                //i++;
+           // }
         }
     }
 }

@@ -59,5 +59,9 @@ namespace Digital_Diary.Codes
         {
             return this.eventsDataAccess.GetAllEvents(userName);
         }
+        public List<string> AllEventPictures(string eventName)
+        {
+            return this.eventsDataAccess.GetAllPictures(eventName);
+        }
     }
 }
