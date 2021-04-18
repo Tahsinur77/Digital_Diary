@@ -86,7 +86,7 @@ namespace Digital_Diary
             this.lastLabel.Size = new System.Drawing.Size(105, 17);
             this.lastLabel.TabIndex = 4;
             this.lastLabel.Text = "lastmodification";
-            this.lastLabel.Visible = false;
+            this.lastLabel.Click += new System.EventHandler(this.lastLabel_Click);
             // 
             // EventHomeScreen
             // 
@@ -114,6 +114,8 @@ namespace Digital_Diary
         private System.Windows.Forms.Button logOutButton;
         private System.Windows.Forms.Label lastModificationLabel;
         public System.Windows.Forms.Label lastLabel;
+
+        public string LastLabel { set { this.lastLabel.Text = value; } }
 
 
     }

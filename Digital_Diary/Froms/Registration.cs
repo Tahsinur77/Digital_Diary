@@ -1,4 +1,5 @@
-﻿using Digital_Diary.Codes;
+﻿using Digital_Diary.Access_to_Database.Entities;
+using Digital_Diary.Codes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,8 +57,22 @@ namespace Digital_Diary
                 else
                 {
                     
+                    User user = new User();
                     RegistrationServices checkingUserName = new RegistrationServices();
-                    bool checking = checkingUserName.CheckingUserName(UserNameTextBox);
+                    user = checkingUserName.CheckingUserName(UserNameTextBox);
+                    bool checking = false;
+
+
+
+                    if (user == null) checking =  false;
+                    if (user.UserName == UserNameTextBox)
+                    {
+                        checking =  true;
+                    }
+                    else checking =  false;
+
+
+
                     if (checking)
                     {
                         MessageBox.Show("User Name Already Taken...Try Another user name");

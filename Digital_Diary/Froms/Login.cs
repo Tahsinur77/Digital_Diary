@@ -1,4 +1,5 @@
-﻿using Digital_Diary.Codes;
+﻿using Digital_Diary.Access_to_Database.Entities;
+using Digital_Diary.Codes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,11 +44,14 @@ namespace Digital_Diary
             int x = registration.Search(UserName, Password);
             if (x == 1)
             {
+                User user1 = new User();
+                RegistrationServices checkingUserName = new RegistrationServices();
+                user1 = checkingUserName.CheckingUserName(UserName);
+
                 EventHomeScreen event1 = new EventHomeScreen();
                 this.Hide();
                 event1.LoginUserName(UserName);
-                AllEvents allevents = new AllEvents();
-                allevents.LoginUser(UserName);
+                event1.LastModi(user1.LastModification);
                 event1.Show();
             }
             else

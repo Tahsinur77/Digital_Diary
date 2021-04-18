@@ -15,5 +15,6 @@ namespace Digital_Diary.Access_to_Database.Entities
         public string Gender { set; get; }
         public string DateofBirth { set; get; }
         public string BloodGroup { set; get; }
+        public string LastModification { set; get; }
     }
 }

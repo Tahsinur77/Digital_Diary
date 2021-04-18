@@ -38,6 +38,7 @@ namespace Digital_Diary.Access_to_Database
             {
                 User user = new User();
                 user.UserName = reader["UserName"].ToString();
+                user.LastModification = reader["Lastmodification"].ToString();
                 return user;
             }
             return null;

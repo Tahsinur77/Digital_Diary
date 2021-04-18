@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Digital_Diary.Access_to_Database.Entities;
+using Digital_Diary.Codes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,10 @@ namespace Digital_Diary
         public void LoginUserName(string userName)
         {
             this.userName = userName;
+        }
+        public void LastModi(string lastModi)
+        {
+            this.LastLabel = lastModi;
         }
         public string UserName
         {
@@ -51,6 +57,10 @@ namespace Digital_Diary
             this.Hide();
             allevents.LoginUser(userName);
             allevents.Show();
+        }
+
+        private void lastLabel_Click(object sender, EventArgs e)
+        {
         }
     }
 }

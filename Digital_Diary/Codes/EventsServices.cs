@@ -72,5 +72,9 @@ namespace Digital_Diary.Codes
         {
             return this.eventsDataAccess.DeleteEvent(eventName);
         }
+        public int UpdateTime(User user)
+        {
+            return this.eventsDataAccess.UpdateTime(user);
+        }
     }
 }

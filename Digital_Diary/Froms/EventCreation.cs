@@ -1,4 +1,5 @@
-﻿using Digital_Diary.Codes;
+﻿using Digital_Diary.Access_to_Database.Entities;
+using Digital_Diary.Codes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,27 +51,43 @@ namespace Digital_Diary
                 else if (ModerateRadioButton) importance = "Moderate";
                 else importance = "Low";
 
-                //EventsServices eventsServices = new EventsServices();
                 eventsServices.AddEvents(EventName, EventStory, EventDate, importance, UserName2);
                 foreach (string pic in pictures)
                 {
                     eventsServices.AddPictures(pic, EventName);
                 }
                 MessageBox.Show("Creat new events Successfully");
+
+
+                User user = new User();
+                user.UserName = this.userName;
+                user.LastModification = DateTime.Now.ToString();
+                EventsServices eventsServices1 = new EventsServices();
+                eventsServices1.UpdateTime(user);
+
+                User user1 = new User();
+                RegistrationServices checkingUserName = new RegistrationServices();
+                user1 = checkingUserName.CheckingUserName(userName);
+
                 EventHomeScreen eventHomeScreen = new EventHomeScreen();
                 this.Hide();
-                eventHomeScreen.lastLabel.Text = DateTime.Now.ToString();
-                eventHomeScreen.lastLabel.Visible = true;
                 eventHomeScreen.LoginUserName(userName);
                 eventHomeScreen.Show();
+                eventHomeScreen.LastModi(user1.LastModification);
+
             }
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            User user1 = new User();
+            RegistrationServices checkingUserName = new RegistrationServices();
+            user1 = checkingUserName.CheckingUserName(userName);
+
             EventHomeScreen eventHome = new EventHomeScreen();
             this.Hide();
             eventHome.LoginUserName(userName);
+            eventHome.LastModi(user1.LastModification);
             eventHome.Show();
         }
 

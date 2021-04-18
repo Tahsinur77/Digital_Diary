@@ -17,6 +17,7 @@ namespace Digital_Diary
     {
         private string userName;
         List<string> pictures = new List<string>();
+
         public AllEvents()
         {
             InitializeComponent();
@@ -38,9 +39,14 @@ namespace Digital_Diary
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            User user1 = new User();
+            RegistrationServices checkingUserName = new RegistrationServices();
+            user1 = checkingUserName.CheckingUserName(userName);
+            
             EventHomeScreen eventHomeScreen = new EventHomeScreen();
             this.Hide();
             eventHomeScreen.LoginUserName(userName);
+            eventHomeScreen.LastModi(user1.LastModification);
             eventHomeScreen.Show();
         }
 
@@ -57,9 +63,18 @@ namespace Digital_Diary
 
         private void showEventListButton_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(userName);
+            
             EventsServices events = new EventsServices();
-            allEventsComboBox.DataSource = events.AllEventsName(userName);
+            if (events.AllEventsName(userName).Count > 0)
+            {
+                EventsServices events1 = new EventsServices();
+                allEventsComboBox.DataSource = events1.AllEventsName(userName);
+                //MessageBox.Show(""+events.AllEventsName(userName).Count);
+            }
+            else
+            {
+                MessageBox.Show("There is no Event....");
+            }
 
         }
 
@@ -142,6 +157,19 @@ namespace Digital_Diary
                     EventHomeScreen eventHomeScreen = new EventHomeScreen();
                     eventHomeScreen.lastLabel.Text = DateTime.Now.ToString();
                     eventHomeScreen.lastLabel.Visible = true;
+
+                    User user = new User();
+                    user.UserName = this.userName;
+                    user.LastModification = DateTime.Now.ToString();
+                    EventsServices eventsServices1 = new EventsServices();
+                    eventsServices1.UpdateTime(user);
+
+                    User user1 = new User();
+                    RegistrationServices checkingUserName = new RegistrationServices();
+                    user1 = checkingUserName.CheckingUserName(userName);
+                    eventHomeScreen.LastModi(user1.LastModification);
+
+
                 }
                 else
                 {

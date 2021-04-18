@@ -37,10 +37,10 @@ namespace Digital_Diary
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 118);
+            this.label1.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(200, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 29);
+            this.label1.Size = new System.Drawing.Size(283, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome To Digital Diary";
             // 
@@ -54,9 +54,10 @@ namespace Digital_Diary
             // 
             // goButton
             // 
+            this.goButton.Font = new System.Drawing.Font("Mistral", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goButton.Location = new System.Drawing.Point(299, 249);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(85, 33);
+            this.goButton.Size = new System.Drawing.Size(96, 40);
             this.goButton.TabIndex = 2;
             this.goButton.Text = "Go";
             this.goButton.UseVisualStyleBackColor = true;
