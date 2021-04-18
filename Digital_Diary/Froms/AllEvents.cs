@@ -121,5 +121,40 @@ namespace Digital_Diary
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure to Delete the Event?";
+            string title = "Sure to Delete!!";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult ans = MessageBox.Show(message, title, buttons);
+            if (ans == DialogResult.Yes)
+            {
+                EventsServices eventsServices = new EventsServices();
+                int result = eventsServices.DeletingEvent(ComboBoxText);
+                if (result > 0)
+                {
+                    panel1.Controls.Clear();
+                    storyLabel.Visible = false;
+                    dateLabel.Visible = false;
+                    importanceLabel.Visible = false;
+                    MessageBox.Show("Event Delete Sucessfully...");
+                    EventHomeScreen eventHomeScreen = new EventHomeScreen();
+                    eventHomeScreen.lastLabel.Text = DateTime.Now.ToString();
+                    eventHomeScreen.lastLabel.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Error...");
+                }
+                
+            }
+            else
+            {
+                //this.Close();
+                // Do something  
+            }
+            
+        }
     }
 }

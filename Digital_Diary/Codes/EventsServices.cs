@@ -67,5 +67,10 @@ namespace Digital_Diary.Codes
         {
             return this.eventsDataAccess.GetStory(eventName);
         }
+
+        public int DeletingEvent(string eventName)
+        {
+            return this.eventsDataAccess.DeleteEvent(eventName);
+        }
     }
 }

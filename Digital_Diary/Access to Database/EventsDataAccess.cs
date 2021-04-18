@@ -75,5 +75,13 @@ namespace Digital_Diary.Access_to_Database
             }
             return null;
         }
+
+        public int DeleteEvent(string eventName)
+        {
+            string sql = "DELETE FROM Events WHERE EventName='"+eventName+"'";
+            string sql2 = "DELETE FROM Pictures WHERE EventName='" + eventName + "'";
+            this.ExecuteQuery(sql2);
+            return this.ExecuteQuery(sql);
+        }
     }
 }

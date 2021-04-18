@@ -38,12 +38,16 @@ namespace Digital_Diary
             this.storyLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateLabel = new System.Windows.Forms.Label();
             this.importanceLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // backButton
@@ -87,7 +91,7 @@ namespace Digital_Diary
             // 
             // viewButton
             // 
-            this.viewButton.Location = new System.Drawing.Point(363, 65);
+            this.viewButton.Location = new System.Drawing.Point(347, 62);
             this.viewButton.Name = "viewButton";
             this.viewButton.Size = new System.Drawing.Size(75, 25);
             this.viewButton.TabIndex = 4;
@@ -97,9 +101,9 @@ namespace Digital_Diary
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(17, 96);
+            this.panel1.Location = new System.Drawing.Point(17, 133);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(632, 539);
+            this.panel1.Size = new System.Drawing.Size(632, 502);
             this.panel1.TabIndex = 8;
             // 
             // storyLabel
@@ -120,7 +124,7 @@ namespace Digital_Diary
             this.groupBox1.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 162);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(319, 134);
+            this.groupBox1.Size = new System.Drawing.Size(333, 134);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Event Story";
@@ -133,30 +137,22 @@ namespace Digital_Diary
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(671, 96);
+            this.groupBox2.Location = new System.Drawing.Point(671, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(344, 312);
+            this.groupBox2.Size = new System.Drawing.Size(355, 312);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Event Details";
             // 
-            // label2
+            // importanceLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 29);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Date";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 29);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Importance";
+            this.importanceLabel.AutoSize = true;
+            this.importanceLabel.Location = new System.Drawing.Point(114, 96);
+            this.importanceLabel.Name = "importanceLabel";
+            this.importanceLabel.Size = new System.Drawing.Size(59, 29);
+            this.importanceLabel.TabIndex = 15;
+            this.importanceLabel.Text = "label5";
+            this.importanceLabel.Visible = false;
             // 
             // dateLabel
             // 
@@ -169,21 +165,64 @@ namespace Digital_Diary
             this.dateLabel.Text = "label4";
             this.dateLabel.Visible = false;
             // 
-            // importanceLabel
+            // label3
             // 
-            this.importanceLabel.AutoSize = true;
-            this.importanceLabel.Location = new System.Drawing.Point(114, 96);
-            this.importanceLabel.Name = "importanceLabel";
-            this.importanceLabel.Size = new System.Drawing.Size(59, 29);
-            this.importanceLabel.TabIndex = 15;
-            this.importanceLabel.Text = "label5";
-            this.importanceLabel.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 29);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Importance";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 29);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Date";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Red;
+            this.groupBox3.Location = new System.Drawing.Point(461, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(301, 87);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Delete!!";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(16, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "For Deleting Event";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(210, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AllEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 647);
+            this.ClientSize = new System.Drawing.Size(1038, 647);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.viewButton);
@@ -200,6 +239,8 @@ namespace Digital_Diary
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +261,9 @@ namespace Digital_Diary
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
 
         public string ComboBoxText
         {
