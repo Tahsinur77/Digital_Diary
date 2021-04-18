@@ -34,15 +34,21 @@ namespace Digital_Diary
             this.showEventListButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.viewButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.previousButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.storyLabel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.importanceLabel = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(816, 606);
+            this.backButton.Location = new System.Drawing.Point(922, 606);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(84, 29);
             this.backButton.TabIndex = 0;
@@ -89,40 +95,97 @@ namespace Digital_Diary
             this.viewButton.UseVisualStyleBackColor = true;
             this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(40, 109);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(745, 526);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Location = new System.Drawing.Point(17, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(632, 539);
+            this.panel1.TabIndex = 8;
             // 
-            // nextButton
+            // storyLabel
             // 
-            this.nextButton.Location = new System.Drawing.Point(816, 126);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(75, 23);
-            this.nextButton.TabIndex = 6;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
+            this.storyLabel.AutoSize = true;
+            this.storyLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storyLabel.Location = new System.Drawing.Point(23, 33);
+            this.storyLabel.Name = "storyLabel";
+            this.storyLabel.Size = new System.Drawing.Size(52, 24);
+            this.storyLabel.TabIndex = 10;
+            this.storyLabel.Text = "label3";
+            this.storyLabel.Visible = false;
+            this.storyLabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // previousButton
+            // groupBox1
             // 
-            this.previousButton.Location = new System.Drawing.Point(816, 176);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(75, 23);
-            this.previousButton.TabIndex = 7;
-            this.previousButton.Text = "Previous";
-            this.previousButton.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.storyLabel);
+            this.groupBox1.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(16, 162);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(319, 134);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Event Story";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.importanceLabel);
+            this.groupBox2.Controls.Add(this.dateLabel);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(671, 96);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(344, 312);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Event Details";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 29);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 29);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Importance";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Font = new System.Drawing.Font("Mistral", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.Location = new System.Drawing.Point(114, 51);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(58, 29);
+            this.dateLabel.TabIndex = 14;
+            this.dateLabel.Text = "label4";
+            this.dateLabel.Visible = false;
+            // 
+            // importanceLabel
+            // 
+            this.importanceLabel.AutoSize = true;
+            this.importanceLabel.Location = new System.Drawing.Point(114, 96);
+            this.importanceLabel.Name = "importanceLabel";
+            this.importanceLabel.Size = new System.Drawing.Size(59, 29);
+            this.importanceLabel.TabIndex = 15;
+            this.importanceLabel.Text = "label5";
+            this.importanceLabel.Visible = false;
             // 
             // AllEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 647);
-            this.Controls.Add(this.previousButton);
-            this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1027, 647);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.viewButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.showEventListButton);
@@ -133,7 +196,10 @@ namespace Digital_Diary
             this.Text = "AllEvents";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AllEvent_FormClosing);
             this.Load += new System.EventHandler(this.AllEvents_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,9 +212,14 @@ namespace Digital_Diary
         private System.Windows.Forms.Button showEventListButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button viewButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.Button previousButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label storyLabel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label importanceLabel;
+        private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
 
         public string ComboBoxText
         {

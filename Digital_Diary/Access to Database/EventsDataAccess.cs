@@ -60,5 +60,20 @@ namespace Digital_Diary.Access_to_Database
             }
             return pictures;
         }
+
+        public Events GetStory(string eventName)
+        {
+            string sql = "SELECT * FROM Events WHERE EventName='" + eventName + "'";
+            SqlDataReader reader = this.GetData(sql);
+            while (reader.Read())
+            {
+                Events events = new Events();
+                events.EventStory = reader["Story"].ToString();
+                events.EventDate = reader["EventDate"].ToString();
+                events.Importance = reader["Importance"].ToString();
+                return events;
+            }
+            return null;
+        }
     }
 }
