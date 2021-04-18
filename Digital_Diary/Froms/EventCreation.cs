@@ -59,6 +59,8 @@ namespace Digital_Diary
                 MessageBox.Show("Creat new events Successfully");
                 EventHomeScreen eventHomeScreen = new EventHomeScreen();
                 this.Hide();
+                eventHomeScreen.lastLabel.Text = DateTime.Now.ToString();
+                eventHomeScreen.lastLabel.Visible = true;
                 eventHomeScreen.LoginUserName(userName);
                 eventHomeScreen.Show();
             }
