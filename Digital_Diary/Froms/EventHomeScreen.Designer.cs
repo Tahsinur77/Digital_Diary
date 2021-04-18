@@ -96,7 +96,7 @@ namespace Digital_Diary
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.creatNewEventButton);
             this.groupBox1.Controls.Add(this.lastLabel);
             this.groupBox1.Controls.Add(this.savedEventButton);

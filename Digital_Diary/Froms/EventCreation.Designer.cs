@@ -50,7 +50,7 @@ namespace Digital_Diary
             // 
             // eventGroupBox
             // 
-            this.eventGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.eventGroupBox.BackColor = System.Drawing.Color.Silver;
             this.eventGroupBox.Controls.Add(this.addButton);
             this.eventGroupBox.Controls.Add(this.importanceGroupBox);
             this.eventGroupBox.Controls.Add(this.dateTimePicker1);
