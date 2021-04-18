@@ -88,5 +88,10 @@ namespace Digital_Diary.Access_to_Database
             string sql = "UPDATE Users SET LastModification='" + user.LastModification + "' WHERE UserName='" + user.UserName + "'";
             return this.ExecuteQuery(sql);
         }
+        public int UpdatePicture(string updatePicture,string previousPicture)
+        {
+            string sql = "UPDATE Pictures SET Pictures='" + updatePicture + "' WHERE Pictures='" + previousPicture+ "'";
+            return this.ExecuteQuery(sql);
+        }
     }
 }

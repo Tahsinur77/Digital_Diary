@@ -17,7 +17,7 @@ namespace Digital_Diary
     {
         private string userName;
         List<string> pictures = new List<string>();
-
+        string updatePicture = "";
         public AllEvents()
         {
             InitializeComponent();
@@ -183,6 +183,46 @@ namespace Digital_Diary
                 // Do something  
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Image Files(*.jpg; *.jpeg; *.png; .bmp)|.jpg; *.jpeg; *.png; *.bmp";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                updatePicture = openFile.FileName; 
+            }
+
+            
+        }
+
+        private void setButton_Click(object sender, EventArgs e)
+        {
+            EventsServices eventsServices = new EventsServices();
+            foreach (string pic in eventsServices.AllEventPictures(ComboBoxText))
+            {
+                pictures.Add(pic);
+            }
+            int x = Convert.ToInt32(cngTextBox.Text);
+            string previousPicture = pictures[x - 1];
+            EventsServices eventsServices1 = new EventsServices();
+            int ans = eventsServices1.UpdatePicture(updatePicture, previousPicture);
+
+            if (ans > 0)
+            {
+                panel1.Controls.Clear();
+                storyLabel.Visible = false;
+                dateLabel.Visible = false;
+                importanceLabel.Visible = false;
+                MessageBox.Show("Change Sucessfully...");
+
+            }
+            else
+            {
+                MessageBox.Show("Error....");
+            }
         }
     }
 }

@@ -76,5 +76,9 @@ namespace Digital_Diary.Codes
         {
             return this.eventsDataAccess.UpdateTime(user);
         }
+        public int UpdatePicture(string updatePicture, string previousPicture)
+        {
+            return this.eventsDataAccess.UpdatePicture(updatePicture, previousPicture);
+        }
     }
 }
