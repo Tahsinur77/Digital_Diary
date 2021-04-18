@@ -31,7 +31,7 @@ namespace Digital_Diary
         {
             progressBar1.Maximum = 100;
             progressBar1.Step = 1;
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 5000; i++)
             {
                 progressBar1.PerformStep();
             }

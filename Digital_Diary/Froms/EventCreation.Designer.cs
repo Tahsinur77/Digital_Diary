@@ -50,6 +50,7 @@ namespace Digital_Diary
             // 
             // eventGroupBox
             // 
+            this.eventGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.eventGroupBox.Controls.Add(this.addButton);
             this.eventGroupBox.Controls.Add(this.importanceGroupBox);
             this.eventGroupBox.Controls.Add(this.dateTimePicker1);
@@ -60,30 +61,33 @@ namespace Digital_Diary
             this.eventGroupBox.Controls.Add(this.storyLabel);
             this.eventGroupBox.Controls.Add(this.eventNameTextBox);
             this.eventGroupBox.Controls.Add(this.eventLabel);
-            this.eventGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventGroupBox.Location = new System.Drawing.Point(34, 25);
+            this.eventGroupBox.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.eventGroupBox.Location = new System.Drawing.Point(49, 38);
             this.eventGroupBox.Name = "eventGroupBox";
-            this.eventGroupBox.Size = new System.Drawing.Size(670, 458);
+            this.eventGroupBox.Size = new System.Drawing.Size(698, 433);
             this.eventGroupBox.TabIndex = 0;
             this.eventGroupBox.TabStop = false;
             this.eventGroupBox.Text = "Event";
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(534, 402);
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addButton.Location = new System.Drawing.Point(557, 350);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(101, 34);
             this.addButton.TabIndex = 9;
             this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // importanceGroupBox
             // 
+            this.importanceGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.importanceGroupBox.Controls.Add(this.lowRadioButton);
             this.importanceGroupBox.Controls.Add(this.moderateRadioButton);
             this.importanceGroupBox.Controls.Add(this.highRadioButton);
-            this.importanceGroupBox.Location = new System.Drawing.Point(411, 175);
+            this.importanceGroupBox.Location = new System.Drawing.Point(473, 174);
             this.importanceGroupBox.Name = "importanceGroupBox";
             this.importanceGroupBox.Size = new System.Drawing.Size(185, 129);
             this.importanceGroupBox.TabIndex = 8;
@@ -93,10 +97,10 @@ namespace Digital_Diary
             // lowRadioButton
             // 
             this.lowRadioButton.AutoSize = true;
-            this.lowRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lowRadioButton.Font = new System.Drawing.Font("Monotype Corsiva", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lowRadioButton.Location = new System.Drawing.Point(30, 93);
             this.lowRadioButton.Name = "lowRadioButton";
-            this.lowRadioButton.Size = new System.Drawing.Size(61, 24);
+            this.lowRadioButton.Size = new System.Drawing.Size(59, 24);
             this.lowRadioButton.TabIndex = 2;
             this.lowRadioButton.TabStop = true;
             this.lowRadioButton.Text = "Low";
@@ -105,10 +109,10 @@ namespace Digital_Diary
             // moderateRadioButton
             // 
             this.moderateRadioButton.AutoSize = true;
-            this.moderateRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moderateRadioButton.Font = new System.Drawing.Font("Monotype Corsiva", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moderateRadioButton.Location = new System.Drawing.Point(30, 63);
             this.moderateRadioButton.Name = "moderateRadioButton";
-            this.moderateRadioButton.Size = new System.Drawing.Size(100, 24);
+            this.moderateRadioButton.Size = new System.Drawing.Size(87, 24);
             this.moderateRadioButton.TabIndex = 1;
             this.moderateRadioButton.TabStop = true;
             this.moderateRadioButton.Text = "Moderate";
@@ -117,10 +121,10 @@ namespace Digital_Diary
             // highRadioButton
             // 
             this.highRadioButton.AutoSize = true;
-            this.highRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highRadioButton.Font = new System.Drawing.Font("Monotype Corsiva", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highRadioButton.Location = new System.Drawing.Point(30, 33);
             this.highRadioButton.Name = "highRadioButton";
-            this.highRadioButton.Size = new System.Drawing.Size(65, 24);
+            this.highRadioButton.Size = new System.Drawing.Size(61, 24);
             this.highRadioButton.TabIndex = 0;
             this.highRadioButton.TabStop = true;
             this.highRadioButton.Text = "High";
@@ -129,7 +133,7 @@ namespace Digital_Diary
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Monotype Corsiva", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(411, 96);
             this.dateTimePicker1.MaxDate = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -142,27 +146,28 @@ namespace Digital_Diary
             this.selectDateLabel.AutoSize = true;
             this.selectDateLabel.Location = new System.Drawing.Point(406, 64);
             this.selectDateLabel.Name = "selectDateLabel";
-            this.selectDateLabel.Size = new System.Drawing.Size(203, 29);
+            this.selectDateLabel.Size = new System.Drawing.Size(167, 28);
             this.selectDateLabel.TabIndex = 6;
             this.selectDateLabel.Text = "Select Event Date";
             // 
             // selectPicLabel
             // 
             this.selectPicLabel.AutoSize = true;
-            this.selectPicLabel.Location = new System.Drawing.Point(27, 248);
+            this.selectPicLabel.Location = new System.Drawing.Point(96, 267);
             this.selectPicLabel.Name = "selectPicLabel";
-            this.selectPicLabel.Size = new System.Drawing.Size(162, 29);
+            this.selectPicLabel.Size = new System.Drawing.Size(127, 28);
             this.selectPicLabel.TabIndex = 5;
             this.selectPicLabel.Text = "Select Picture";
             // 
             // browserButton
             // 
-            this.browserButton.Location = new System.Drawing.Point(208, 246);
+            this.browserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.browserButton.Location = new System.Drawing.Point(247, 258);
             this.browserButton.Name = "browserButton";
-            this.browserButton.Size = new System.Drawing.Size(113, 33);
+            this.browserButton.Size = new System.Drawing.Size(144, 45);
             this.browserButton.TabIndex = 4;
             this.browserButton.Text = "Browser";
-            this.browserButton.UseVisualStyleBackColor = true;
+            this.browserButton.UseVisualStyleBackColor = false;
             this.browserButton.Click += new System.EventHandler(this.browserButton_Click);
             // 
             // storyTextBox
@@ -178,7 +183,7 @@ namespace Digital_Diary
             this.storyLabel.AutoSize = true;
             this.storyLabel.Location = new System.Drawing.Point(57, 122);
             this.storyLabel.Name = "storyLabel";
-            this.storyLabel.Size = new System.Drawing.Size(68, 29);
+            this.storyLabel.Size = new System.Drawing.Size(58, 28);
             this.storyLabel.TabIndex = 2;
             this.storyLabel.Text = "Story";
             // 
@@ -186,7 +191,7 @@ namespace Digital_Diary
             // 
             this.eventNameTextBox.Location = new System.Drawing.Point(208, 64);
             this.eventNameTextBox.Name = "eventNameTextBox";
-            this.eventNameTextBox.Size = new System.Drawing.Size(143, 34);
+            this.eventNameTextBox.Size = new System.Drawing.Size(182, 33);
             this.eventNameTextBox.TabIndex = 1;
             // 
             // eventLabel
@@ -194,25 +199,29 @@ namespace Digital_Diary
             this.eventLabel.AutoSize = true;
             this.eventLabel.Location = new System.Drawing.Point(45, 64);
             this.eventLabel.Name = "eventLabel";
-            this.eventLabel.Size = new System.Drawing.Size(144, 29);
+            this.eventLabel.Size = new System.Drawing.Size(120, 28);
             this.eventLabel.TabIndex = 0;
             this.eventLabel.Text = "Event Name";
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(583, 502);
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.backButton.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.Color.Red;
+            this.backButton.Location = new System.Drawing.Point(649, 496);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(86, 29);
+            this.backButton.Size = new System.Drawing.Size(98, 38);
             this.backButton.TabIndex = 1;
             this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // EventCreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 557);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(804, 557);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.eventGroupBox);
             this.Name = "EventCreation";

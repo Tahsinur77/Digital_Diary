@@ -38,7 +38,7 @@ namespace Digital_Diary
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 109);
+            this.label1.Location = new System.Drawing.Point(256, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 35);
             this.label1.TabIndex = 0;
@@ -46,7 +46,8 @@ namespace Digital_Diary
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(194, 189);
+            this.progressBar1.BackColor = System.Drawing.Color.Blue;
+            this.progressBar1.Location = new System.Drawing.Point(246, 199);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(305, 42);
             this.progressBar1.TabIndex = 1;
@@ -54,23 +55,27 @@ namespace Digital_Diary
             // 
             // goButton
             // 
+            this.goButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.goButton.Font = new System.Drawing.Font("Mistral", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goButton.Location = new System.Drawing.Point(299, 249);
+            this.goButton.ForeColor = System.Drawing.Color.Red;
+            this.goButton.Location = new System.Drawing.Point(331, 259);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(96, 40);
+            this.goButton.Size = new System.Drawing.Size(131, 49);
             this.goButton.TabIndex = 2;
             this.goButton.Text = "Go";
-            this.goButton.UseVisualStyleBackColor = true;
+            this.goButton.UseVisualStyleBackColor = false;
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // Home_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(789, 464);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Name = "Home_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Screen";

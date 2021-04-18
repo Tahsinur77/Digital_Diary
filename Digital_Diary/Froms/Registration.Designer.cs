@@ -56,6 +56,7 @@ namespace Digital_Diary
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.femaleButton);
             this.groupBox1.Controls.Add(this.maleButton);
@@ -76,8 +77,9 @@ namespace Digital_Diary
             this.groupBox1.Controls.Add(this.userNameLabel);
             this.groupBox1.Controls.Add(this.nameTextBox);
             this.groupBox1.Controls.Add(this.nameLabel);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox1.Location = new System.Drawing.Point(103, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(511, 533);
             this.groupBox1.TabIndex = 0;
@@ -87,20 +89,20 @@ namespace Digital_Diary
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(237, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 15);
+            this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 39;
             this.label1.Text = "No spech allow ";
             // 
             // femaleButton
             // 
             this.femaleButton.AutoSize = true;
-            this.femaleButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.femaleButton.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femaleButton.Location = new System.Drawing.Point(334, 303);
             this.femaleButton.Name = "femaleButton";
-            this.femaleButton.Size = new System.Drawing.Size(97, 25);
+            this.femaleButton.Size = new System.Drawing.Size(88, 28);
             this.femaleButton.TabIndex = 38;
             this.femaleButton.TabStop = true;
             this.femaleButton.Text = "Female";
@@ -109,10 +111,10 @@ namespace Digital_Diary
             // maleButton
             // 
             this.maleButton.AutoSize = true;
-            this.maleButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maleButton.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maleButton.Location = new System.Drawing.Point(240, 303);
             this.maleButton.Name = "maleButton";
-            this.maleButton.Size = new System.Drawing.Size(77, 25);
+            this.maleButton.Size = new System.Drawing.Size(72, 28);
             this.maleButton.TabIndex = 37;
             this.maleButton.TabStop = true;
             this.maleButton.Text = "Male";
@@ -121,34 +123,37 @@ namespace Digital_Diary
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.genderLabel.Location = new System.Drawing.Point(147, 307);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(69, 21);
+            this.genderLabel.Size = new System.Drawing.Size(66, 24);
             this.genderLabel.TabIndex = 36;
             this.genderLabel.Text = "Gender";
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.submitButton.Enabled = false;
             this.submitButton.Location = new System.Drawing.Point(196, 487);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(123, 36);
             this.submitButton.TabIndex = 35;
             this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submit_Click);
             // 
             // termCondition
             // 
             this.termCondition.AutoSize = true;
-            this.termCondition.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.termCondition.BackColor = System.Drawing.Color.Lime;
+            this.termCondition.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.termCondition.Location = new System.Drawing.Point(94, 439);
             this.termCondition.Name = "termCondition";
-            this.termCondition.Size = new System.Drawing.Size(344, 25);
+            this.termCondition.Size = new System.Drawing.Size(304, 28);
             this.termCondition.TabIndex = 34;
             this.termCondition.Text = "Agree with the term and condition";
-            this.termCondition.UseVisualStyleBackColor = true;
+            this.termCondition.UseVisualStyleBackColor = false;
             this.termCondition.CheckedChanged += new System.EventHandler(this.termCondition_CheckedChanged);
             // 
             // bloodGroupcomboBox
@@ -172,30 +177,32 @@ namespace Digital_Diary
             // bloodGroupLabel
             // 
             this.bloodGroupLabel.AutoSize = true;
-            this.bloodGroupLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodGroupLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodGroupLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.bloodGroupLabel.Location = new System.Drawing.Point(92, 399);
             this.bloodGroupLabel.Name = "bloodGroupLabel";
-            this.bloodGroupLabel.Size = new System.Drawing.Size(115, 21);
+            this.bloodGroupLabel.Size = new System.Drawing.Size(111, 24);
             this.bloodGroupLabel.TabIndex = 32;
             this.bloodGroupLabel.Text = "Blood Group";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(240, 347);
             this.dateTimePicker1.MaxDate = new System.DateTime(2021, 3, 29, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(221, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(221, 30);
             this.dateTimePicker1.TabIndex = 31;
             this.dateTimePicker1.Value = new System.DateTime(2021, 3, 29, 0, 0, 0, 0);
             // 
             // dateOfBirthLabel
             // 
             this.dateOfBirthLabel.AutoSize = true;
-            this.dateOfBirthLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfBirthLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfBirthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dateOfBirthLabel.Location = new System.Drawing.Point(90, 354);
             this.dateOfBirthLabel.Name = "dateOfBirthLabel";
-            this.dateOfBirthLabel.Size = new System.Drawing.Size(117, 21);
+            this.dateOfBirthLabel.Size = new System.Drawing.Size(118, 24);
             this.dateOfBirthLabel.TabIndex = 30;
             this.dateOfBirthLabel.Text = "Date of Birth";
             // 
@@ -210,10 +217,11 @@ namespace Digital_Diary
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.emailLabel.Location = new System.Drawing.Point(148, 262);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(59, 21);
+            this.emailLabel.Size = new System.Drawing.Size(57, 24);
             this.emailLabel.TabIndex = 28;
             this.emailLabel.Text = "Email";
             // 
@@ -229,10 +237,11 @@ namespace Digital_Diary
             // confirmPassLabel
             // 
             this.confirmPassLabel.AutoSize = true;
-            this.confirmPassLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.confirmPassLabel.Location = new System.Drawing.Point(45, 211);
             this.confirmPassLabel.Name = "confirmPassLabel";
-            this.confirmPassLabel.Size = new System.Drawing.Size(161, 21);
+            this.confirmPassLabel.Size = new System.Drawing.Size(154, 24);
             this.confirmPassLabel.TabIndex = 26;
             this.confirmPassLabel.Text = "Confirm Password";
             // 
@@ -248,10 +257,11 @@ namespace Digital_Diary
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.passwordLabel.Location = new System.Drawing.Point(119, 157);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(87, 21);
+            this.passwordLabel.Size = new System.Drawing.Size(86, 24);
             this.passwordLabel.TabIndex = 24;
             this.passwordLabel.Text = "Password";
             // 
@@ -266,10 +276,11 @@ namespace Digital_Diary
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.userNameLabel.Location = new System.Drawing.Point(124, 111);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(92, 21);
+            this.userNameLabel.Size = new System.Drawing.Size(88, 24);
             this.userNameLabel.TabIndex = 22;
             this.userNameLabel.Text = "Username";
             // 
@@ -284,28 +295,32 @@ namespace Digital_Diary
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.nameLabel.Location = new System.Drawing.Point(148, 46);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(58, 21);
+            this.nameLabel.Size = new System.Drawing.Size(55, 24);
             this.nameLabel.TabIndex = 20;
             this.nameLabel.Text = "Name";
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(448, 551);
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.backButton.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Location = new System.Drawing.Point(646, 555);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 34);
             this.backButton.TabIndex = 1;
             this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 592);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(771, 601);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.groupBox1);
             this.Name = "Registration";
