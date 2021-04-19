@@ -46,11 +46,11 @@ namespace Digital_Diary
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.updateGroupBox = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cngTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.setButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cngTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -263,22 +263,26 @@ namespace Digital_Diary
             this.updateGroupBox.TabStop = false;
             this.updateGroupBox.Text = "Update";
             // 
-            // label5
+            // setButton
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 22);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Delete Pic Number";
+            this.setButton.BackColor = System.Drawing.Color.Red;
+            this.setButton.Location = new System.Drawing.Point(190, 135);
+            this.setButton.Name = "setButton";
+            this.setButton.Size = new System.Drawing.Size(96, 39);
+            this.setButton.TabIndex = 4;
+            this.setButton.Text = "Set";
+            this.setButton.UseVisualStyleBackColor = false;
+            this.setButton.Click += new System.EventHandler(this.setButton_Click);
             // 
-            // cngTextBox
+            // label6
             // 
-            this.cngTextBox.Location = new System.Drawing.Point(179, 44);
-            this.cngTextBox.Name = "cngTextBox";
-            this.cngTextBox.Size = new System.Drawing.Size(77, 33);
-            this.cngTextBox.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 24);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Update Pic select";
             // 
             // button2
             // 
@@ -291,26 +295,22 @@ namespace Digital_Diary
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
+            // cngTextBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 24);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Update Pic select";
+            this.cngTextBox.Location = new System.Drawing.Point(179, 44);
+            this.cngTextBox.Name = "cngTextBox";
+            this.cngTextBox.Size = new System.Drawing.Size(77, 33);
+            this.cngTextBox.TabIndex = 1;
             // 
-            // setButton
+            // label5
             // 
-            this.setButton.BackColor = System.Drawing.Color.Red;
-            this.setButton.Location = new System.Drawing.Point(190, 135);
-            this.setButton.Name = "setButton";
-            this.setButton.Size = new System.Drawing.Size(96, 39);
-            this.setButton.TabIndex = 4;
-            this.setButton.Text = "Set";
-            this.setButton.UseVisualStyleBackColor = false;
-            this.setButton.Click += new System.EventHandler(this.setButton_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 22);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Update Pic Number";
             // 
             // AllEvents
             // 
